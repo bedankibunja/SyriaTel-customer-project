@@ -34,7 +34,7 @@ The analysis confirms that the area_code data is unreliable, as only three disti
 
 The heatmap identifies perfect correlations (value of 1.00) between several pairs of features: total_day_minutes and total_day_charge, total_eve_minutes and total_eve_charge, total_night_minutes and total_night_charge, as well as total_intl_minutes and total_intl_charge. This is expected since charges are typically calculated based on the number of minutes spent on calls. However, this introduces multicollinearity into our model, which can distort the impact of individual variables and lead to overfitting. To mitigate this, we will drop the total_x_minutes columns (total_day_minutes, total_eve_minutes, total_night_minutes, and total_intl_minutes) from our dataset. Retaining only the corresponding total_x_charge columns should provide the same information without redundancy.
 
-![Correlation with Churn Heatmap](SyriaTel-customer-project/heatmap diagram.png)
+![Correlation with Churn Heatmap](SyriaTel-customer-project/heatmap%20diagram.png)
 
 ## Data Analysis
 We begin by analyzing the relationship between various features both categorical and numerical and customer churn to identify key factors that influence a customer's decision to leave the company.
@@ -52,18 +52,18 @@ Decision Tree: We explored this model while addressing overfitting concerns by t
 XGBoost: As a more advanced model, XGBoost was evaluated for its performance and ability to handle the dataset's complexity.
 The goal was to identify the model that offered the best performance metrics, such as accuracy, recall, and precision, and was well-suited for predicting customer churn.
 
-![Train Confusion Matrix](SyriaTel-customer-project/confusion matrix 1.png) 
+![Train Confusion Matrix](SyriaTel-customer-project/confusion%20matrix 1.png) 
 
 Extremely High Accuracy: The overall accuracy of the ResNet50 model is exceptionally high at approximately 99.98%. This indicates that the model is making correct predictions for a vast majority of instances.
 Perfect Precision: The precision is 1.0, which is the highest possible value. This means that whenever the model predicts a positive instance (a customer churning), it is always correct.
 Very High Recall: The recall is also very high at 99.91%. This means that the model is capturing a significant number of actual positive instances (customers who churned).
 
-![Test Confusion Matrix](SyriaTel-customer-project/confusion matrix 2.png)
+![Test Confusion Matrix](SyriaTel-customer-project/confusion%20matrix 2.png)
 
 ### Feature Importance 
 In our data analysis, we explored the relationship between various features both categorical and numerical and customer churn to identify key factors influencing a customer's decision to leave the company. We analyzed categorical features like 'state,' 'international_plan,' and 'voice_mail_plan' using count plots, revealing how different categories correlate with churn. For numerical features such as 'account_length,' 'number_vmail_messages,' and 'customer_service_calls,' we employed box plots and violin plots to compare their distributions between churned and non-churned customers. This allowed us to uncover patterns and potential indicators of churn. Following this, we developed predictive models, starting with a baseline Logistic Regression and moving to more complex models like Decision Trees and XGBoost, evaluating each for performance and overfitting. Feature importance was then assessed using the XGBoost model, where we identified and visualized the top 20 features most predictive of churn, offering valuable insights into customer behavior.
 
-![Top 20 Features of Importance](SyriaTel-customer-project/top 20 features.png)
+![Top 20 Features of Importance](SyriaTel-customer-project/top%2020%20features.png)
 
 ## Conclusion
 Using the data provided, we were able to create a model with 82% recall, meaning of the customers who are going to leave, we are able to identify 82% of them. We were able to do this while maintining a high accuracy of 95%.
